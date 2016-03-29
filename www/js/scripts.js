@@ -262,7 +262,7 @@
 				if (tmp_horarios.length >0){
 				
 					var retorno = '<div><h3>' + tmp_data + ' - ' +  semana + '</h3>';
-					retorno = retorno + '<div id="' + nome_div + '" data-role="collapsibleset">';
+					retorno = retorno + '<div id="' + nome_div + '" data-role="collapsible-set">';
 					
 					
 					for	(index = 0; index < tmp_horarios.length; index++) {
