@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.phonegap.binsmobile19" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>FisioAgenda - Cliente</name>
+    <name>FisioAgenda Cliente</name>
     <description>
-        FisioAgenda - Cliente
+        FisioAgenda Cliente
     </description>
     <author email="bins@ig.com.br" href="http://www.leandrotonon.com.br/projetos/bins">
         Bins
