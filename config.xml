@@ -8,7 +8,8 @@
         Bins
     </author>
     <content src="index.html" />
-	<preference name='phonegap-version' value='3.7.0' />
+	<preference name="loadUrlTimeoutValue" value="700000" />
+    <preference name="phonegap-version" value="cli-5.2.0" />
     <preference name="permissions" value="none" />
     <preference name="orientation" value="default" />
     <preference name="target-device" value="universal" />
@@ -32,8 +33,8 @@
     <gap:plugin name="org.apache.cordova.globalization" />
     <gap:plugin name="org.apache.cordova.network-information" />
     <gap:plugin name="org.apache.cordova.splashscreen" />
-    <icon src="icon.png" />
-	<gap:splash src="splash.png" />
+    <icon src="www/icon.png" />
+    <gap:splash src="www/splash.png" />
     <access origin="*" />
     <plugin name="cordova-plugin-whitelist" version="1" />
     <allow-intent href="http://*/*" />
