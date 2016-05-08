@@ -122,17 +122,41 @@
 		}
 		
 		$(document).on('pageshow', '#main', function(){ 
-			ListarAgenda();
+			if (isPhoneGapReady){
+				if (isConnected) {
+					ListarAgenda();
+				} else {
+					navigator.vibrate(2000);
+					navigator.notification.alert('Não existe conexão com a Internet', alertDismissed, 'FisioAgenda', 'OK');
+					$.mobile.changePage("#menu");
+				}	
+			} else {
+				navigator.vibrate(2000);
+				navigator.notification.alert('O aplicativo não está pronto!', alertDismissed, 'FisioAgenda', 'OK');
+				$.mobile.changePage("#menu");
+			}	
 		});
 		
 		
 		$(document).on('pageshow', '#listar', function(){ 
-			
-			ListaPacientes();
+			if (isPhoneGapReady){
+				if (isConnected) {
+					ListaPacientes();
+				} else {
+					navigator.vibrate(2000);
+					navigator.notification.alert('Não existe conexão com a Internet', alertDismissed, 'FisioAgenda', 'OK');
+					$.mobile.changePage("#menu");
+				}	
+			} else {
+				navigator.vibrate(2000);
+				navigator.notification.alert('O aplicativo não está pronto!', alertDismissed, 'FisioAgenda', 'OK');
+				$.mobile.changePage("#menu");
+			}	
 		});
 		
 		$(document).on('pageinit', '#faleconosco', function(){  
-        $(document).on('click', '#enviar_contato', function() { // catch the form's submit event
+        $(document).on('click', '#enviar_contato', function() { 
+			// catch the form's submit event
 		
 			var field_tag_css = {
 				"background-color": "#FFFF99"
@@ -164,6 +188,15 @@
 				continuar = false;
 			}
 			
+			if (isPhoneGapReady){
+				if (isConnected) {
+					//Continuar processamento
+				} else {
+					continuar = false;
+				}
+			} else {
+				continuar = false;
+			}	
 		
 			if (continuar){
 				// Send data to server through the ajax call
